@@ -1,0 +1,137 @@
+/* Reset and global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* HTML & Body Layout for Sticky Footer */
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background: url('https://www.transparenttextures.com/patterns/old-mathematics.png');
+  background-color: #f3e5ab;
+  color: #3b2f0b;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #2e1e0f;
+  padding: 20px;
+  font-style: oblique;
+  color: #f9f1dc;
+  text-align: center;
+}
+
+header h1 {
+  margin-bottom: 5px;
+}
+
+/* Navigation Links */
+.lists {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  margin-top: 10px;
+}
+
+.lists li {
+  margin: 0 15px;
+}
+
+.lists li a {
+  color: #f9f1dc;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.lists li a:hover {
+  text-shadow: 0 0 6px #fffacd;
+}
+
+/* Section Reveal Behavior */
+main.container section {
+  display: none;
+}
+
+main.container section:target {
+  display: block;
+}
+
+/* Intro Section (Default View) */
+.intro {
+  display: block;
+  padding: 40px;
+  margin: 20px;
+  border: 2px dashed #4b1e1e;
+  background-color: rgba(255, 255, 240, 0.95);
+  border-radius: 25px;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Hide intro if any section is targeted */
+section:target ~ .intro {
+  display: none;
+}
+
+/* Common Section Styling */
+main.container section {
+  border: 2px groove #4b1e1e;
+  padding: 30px;
+  margin: 20px;
+  border-radius: 25px;
+  background-color: rgba(255, 255, 240, 0.9);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Headings */
+h2 {
+  text-align: center;
+  color: darkred;
+}
+
+h3 {
+  color: #3a5f5f;
+}
+
+/* Skills List */
+#skills-list {
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+/* Section Links (e.g. Contact) */
+.section_links a {
+  color: darkviolet;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  border-top: 3px solid #888;
+  padding: 15px;
+  background-color: #1e1e1e;
+  color: #c4c4c4;
+  text-align: center;
+  margin-top: auto;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.98); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* Main container grows to fill space for sticky footer */
+main.container {
+  flex: 1;
+}
